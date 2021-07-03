@@ -30,6 +30,7 @@
         android:background="#FFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:labelVisibilityMode="labeled"
+        android:theme="@style/Widget.Design.BottomNavigationView"
         app:menu="@menu/bottom_navigation" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

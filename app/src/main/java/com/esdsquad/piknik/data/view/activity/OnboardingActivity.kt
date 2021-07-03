@@ -1,5 +1,6 @@
 package com.esdsquad.piknik.data.view.activity
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
@@ -35,6 +36,15 @@ class OnboardingActivity : AppCompatActivity(), KodeinAware {
         val adapter = OnboardingAdapter(supportFragmentManager, lifecycle)
         binding.viewpager.adapter = adapter
         binding.dotsIndicator.setViewPager2(binding.viewpager)
+        binding.tvSkip.setOnClickListener {
+            startActivity(
+                Intent(
+                    this@OnboardingActivity,
+                    MainActivity::class.java
+                )
+            )
+            finish()
+        }
     }
 
     private fun setupViewModelAndSetPref() {
@@ -42,5 +52,4 @@ class OnboardingActivity : AppCompatActivity(), KodeinAware {
             ViewModelProvider(this, onboardingViewModelFactory).get(OnboardingViewModel::class.java)
         viewModel.savePrefFist(false)
     }
-
 }

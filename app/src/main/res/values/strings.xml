@@ -6,4 +6,16 @@
     <string name="pesanan">Pesanan</string>
     <string name="notifikasi">Notifikasi</string>
     <string name="akun">Akun</string>
+    <string name="skip">Skip</string>
+
+    <string name="title_1">Tentukan Lokasi Staycationmu pilihanmu dengan piknik.id</string>
+    <string name="subtitle_1">Sekarang kamu dapat memilih tempat berlibur bersama teman atau keluarga tanpa perlu takut salah lokasi.</string>
+
+    <string name="title_2">Menginap di ruang outdoor tanpa perlu repot membawa banyak perlengkapan</string>
+    <string name="subtitle_2">Menjauh sejenak dari hiruk pikuk keramaian kota sambil menikmati gemercik sungai jernih yang mengalir , Sambil menghirup hembusan udara murni yang sejuk.</string>
+
+    <string name="title_3">Staycation tanpa perlu khawatir tertular virus dan penyakit</string>
+    <string name="subtitle_3">Nikmati liburanmu dengan tetap menjaga protokol kesehatan yang diterapkan oleh pemerintah</string>
+    <string name="persiapan_liburanmu">Persiapan liburanmu</string>
+
 </resources>

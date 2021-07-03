@@ -1,4 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_beranda"
+        android:icon="@drawable/ic_home_listener"
+        android:title="@string/beranda" />
+
+    <item
+        android:id="@+id/navigation_pesanan"
+        android:icon="@drawable/ic_profile_listener"
+        android:title="@string/pesanan" />
+
+    <item
+        android:id="@+id/navigation_notifikasi"
+        android:icon="@drawable/ic_notification_listener"
+        android:title="@string/notifikasi" />
+
+    <item
+        android:id="@+id/navigation_akun"
+        android:icon="@drawable/ic_home_listener"
+        android:title="@string/akun" />
 
 </menu>

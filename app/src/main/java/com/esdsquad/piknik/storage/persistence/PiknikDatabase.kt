@@ -6,16 +6,16 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 
 @Database(
-    entities = [ExampleEntity::class],
+    entities = [PiknikEntity::class],
     exportSchema = false,
     version = 1
 )
-abstract class ExampleDatabase : RoomDatabase() {
-    abstract fun exampleDao(): ExampleDao
+abstract class PiknikDatabase : RoomDatabase() {
+    abstract fun exampleDao(): PiknikDao
 
     companion object {
         @Volatile
-        private var instance: ExampleDatabase? = null
+        private var instance: PiknikDatabase? = null
         private val LOCK = Any()
 
         operator fun invoke(context: Context) = instance ?: synchronized(LOCK) {
@@ -25,7 +25,7 @@ abstract class ExampleDatabase : RoomDatabase() {
         private fun buildDatabase(context: Context) =
             Room.databaseBuilder(
                 context.applicationContext,
-                ExampleDatabase::class.java, "ExampleDatabase.db"
+                PiknikDatabase::class.java, "ExampleDatabase.db"
             )
                 .allowMainThreadQueries()
                 .build()

@@ -3,9 +3,9 @@ package com.esdsquad.piknik.storage.perferences
 import android.content.Context
 import android.content.SharedPreferences
 
-private const val prefName = "Example.pref"
+private const val prefName = "Piknik.pref"
 
-class ExamplePreferences(context: Context) {
+class PiknikPreferences(context: Context) {
 
     private var sharedPref: SharedPreferences =
         context.getSharedPreferences(prefName, Context.MODE_PRIVATE)

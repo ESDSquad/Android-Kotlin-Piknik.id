@@ -5,7 +5,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.esdsquad.piknik.data.viewmodel.ExampleViewModel
 import com.esdsquad.piknik.network.PiknikRepository
 
-class ExampleViewModelFactory(
+class OnboardingViewModelFactory(
     private val repository: PiknikRepository
 ) : ViewModelProvider.Factory {
     override fun <T : ViewModel?> create(modelClass: Class<T>): T {

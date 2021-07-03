@@ -4,19 +4,19 @@ import androidx.lifecycle.LiveData
 import androidx.room.*
 
 @Dao
-interface ExampleDao {
+interface PiknikDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun insert(entity: ExampleEntity)
+    suspend fun insert(entity: PiknikEntity)
 
     @Update
-    suspend fun update(entity: ExampleEntity)
+    suspend fun update(entity: PiknikEntity)
 
     @Delete
-    suspend fun delete(entity: ExampleEntity)
+    suspend fun delete(entity: PiknikEntity)
 
     @Query("DELETE FROM tableExample")
     suspend fun deleteAll()
 
     @Query("SELECT * FROM tableExample")
-    fun select(): LiveData<List<ExampleEntity>>
+    fun select(): LiveData<List<PiknikEntity>>
 }

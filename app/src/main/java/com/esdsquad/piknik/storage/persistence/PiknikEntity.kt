@@ -4,7 +4,7 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 
 @Entity(tableName = "tableExample")
-data class ExampleEntity(
+data class PiknikEntity(
     @PrimaryKey(autoGenerate = false)
     val example: String
 )

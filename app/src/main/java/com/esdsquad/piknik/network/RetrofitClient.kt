@@ -9,7 +9,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 private const val baseUrl = "https://api.example.com/"
 
 object RetrofitClient {
-    fun getClient(): ExampleEndpoint {
+    fun getClient(): PiknikEndpoint {
 
         val logging = HttpLoggingInterceptor()
         logging.setLevel(HttpLoggingInterceptor.Level.BODY)
@@ -30,6 +30,6 @@ object RetrofitClient {
             .addConverterFactory(GsonConverterFactory.create(gson))
             .client(client)
             .build()
-            .create(ExampleEndpoint::class.java)
+            .create(PiknikEndpoint::class.java)
     }
 }

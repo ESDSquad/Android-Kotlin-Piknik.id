@@ -3,13 +3,13 @@ package com.esdsquad.piknik.data.viewmodel
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.esdsquad.piknik.network.ExampleRepository
+import com.esdsquad.piknik.network.PiknikRepository
 import com.esdsquad.piknik.network.Resource
 import com.esdsquad.piknik.network.response.ExampleResponse
 import kotlinx.coroutines.launch
 
 class ExampleViewModel(
-    private val repository: ExampleRepository
+    private val repository: PiknikRepository
 ) : ViewModel() {
 
     val exampleResponse: MutableLiveData<Resource<ExampleResponse>> = MutableLiveData()

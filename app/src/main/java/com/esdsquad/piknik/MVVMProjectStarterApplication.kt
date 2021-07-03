@@ -1,12 +1,12 @@
 package com.esdsquad.piknik
 
 import android.app.Application
-import com.esdsquad.piknik.data.viewmodel.factory.ExampleViewModelFactory
-import com.esdsquad.piknik.network.ExampleEndpoint
-import com.esdsquad.piknik.network.ExampleRepository
+import com.esdsquad.piknik.data.viewmodel.factory.OnboardingViewModelFactory
+import com.esdsquad.piknik.network.PiknikEndpoint
+import com.esdsquad.piknik.network.PiknikRepository
 import com.esdsquad.piknik.network.RetrofitClient
-import com.esdsquad.piknik.storage.perferences.ExamplePreferences
-import com.esdsquad.piknik.storage.persistence.ExampleDatabase
+import com.esdsquad.piknik.storage.perferences.PiknikPreferences
+import com.esdsquad.piknik.storage.persistence.PiknikDatabase
 import org.kodein.di.Kodein
 import org.kodein.di.KodeinAware
 import org.kodein.di.android.x.androidXModule
@@ -21,11 +21,11 @@ class MVVMProjectStarterApplication : Application(), KodeinAware {
     override val kodein: Kodein = Kodein.lazy {
         import(androidXModule(this@MVVMProjectStarterApplication))
 
-        bind<ExampleEndpoint>() with singleton { RetrofitClient.getClient() }
-        bind() from singleton { ExamplePreferences(instance()) }
-        bind() from singleton { ExampleDatabase(instance()) }
-        bind() from singleton { ExampleRepository(instance(), instance(), instance()) }
-        bind() from provider { ExampleViewModelFactory(instance()) }
+        bind<PiknikEndpoint>() with singleton { RetrofitClient.getClient() }
+        bind() from singleton { PiknikPreferences(instance()) }
+        bind() from singleton { PiknikDatabase(instance()) }
+        bind() from singleton { PiknikRepository(instance(), instance(), instance()) }
+        bind() from provider { OnboardingViewModelFactory(instance()) }
     }
 
     override fun onCreate() {

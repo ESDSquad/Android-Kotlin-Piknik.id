@@ -22,7 +22,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.esdsquad.piknik.data.view.activity.MainActivity"
+            android:name="com.esdsquad.piknik.data.view.activity.OnboardingActivity"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
     </application>

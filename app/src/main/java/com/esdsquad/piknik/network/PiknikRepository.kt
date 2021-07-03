@@ -1,15 +1,15 @@
 package com.esdsquad.piknik.network
 
-import com.esdsquad.piknik.storage.perferences.ExamplePreferences
+import com.esdsquad.piknik.storage.perferences.PiknikPreferences
 import com.esdsquad.piknik.storage.perferences.PreferencesModel
 import com.esdsquad.piknik.storage.perferences.prefExample
-import com.esdsquad.piknik.storage.persistence.ExampleDatabase
-import com.esdsquad.piknik.storage.persistence.ExampleEntity
+import com.esdsquad.piknik.storage.persistence.PiknikDatabase
+import com.esdsquad.piknik.storage.persistence.PiknikEntity
 
-class ExampleRepository(
-    private val api: ExampleEndpoint,
-    private val pref: ExamplePreferences,
-    private val db: ExampleDatabase
+class PiknikRepository(
+    private val api: PiknikEndpoint,
+    private val pref: PiknikPreferences,
+    private val db: PiknikDatabase
 ) {
     suspend fun fetchGet() = api.exampleGet()
     suspend fun fetchPost() = api.examplePost()
@@ -22,8 +22,8 @@ class ExampleRepository(
         return PreferencesModel(pref.getString(prefExample))
     }
 
-    suspend fun saveDataExample(exampleEntity: ExampleEntity) {
-        db.exampleDao().insert(exampleEntity)
+    suspend fun saveDataExample(piknikEntity: PiknikEntity) {
+        db.exampleDao().insert(piknikEntity)
     }
 
     fun getDataExample() = db.exampleDao().select()

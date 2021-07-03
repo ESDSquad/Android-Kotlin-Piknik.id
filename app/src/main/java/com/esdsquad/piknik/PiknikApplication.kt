@@ -16,10 +16,10 @@ import org.kodein.di.generic.provider
 import org.kodein.di.generic.singleton
 import timber.log.Timber
 
-class MVVMProjectStarterApplication : Application(), KodeinAware {
+class PiknikApplication : Application(), KodeinAware {
 
     override val kodein: Kodein = Kodein.lazy {
-        import(androidXModule(this@MVVMProjectStarterApplication))
+        import(androidXModule(this@PiknikApplication))
 
         bind<PiknikEndpoint>() with singleton { RetrofitClient.getClient() }
         bind() from singleton { PiknikPreferences(instance()) }

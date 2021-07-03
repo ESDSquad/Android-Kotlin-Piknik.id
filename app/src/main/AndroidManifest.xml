@@ -10,11 +10,10 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.MVVMProjectStarter">
+        android:theme="@style/Theme.MVVMProjectStarter.NoActionBar">
         <activity
             android:name="com.esdsquad.piknik.data.view.activity.SplashScreenActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.MVVMProjectStarter.NoActionBar"
             tools:ignore="LockedOrientationActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

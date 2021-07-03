@@ -2,6 +2,7 @@ package com.esdsquad.piknik.data.view.activity
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.esdsquad.piknik.data.view.adapter.OnboardingAdapter
 import com.esdsquad.piknik.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -18,7 +19,9 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setupView() {
-        //TODO("Not yet implemented")
+        val adapter = OnboardingAdapter(supportFragmentManager, lifecycle)
+        binding.viewpager.adapter = adapter
+        binding.dotsIndicator.setViewPager2(binding.viewpager)
     }
 
     private fun setupViewModel() {

@@ -1,8 +1,8 @@
 package com.esdsquad.piknik.network
 
+import com.esdsquad.piknik.storage.perferences.OnboardingPreferencesModel
 import com.esdsquad.piknik.storage.perferences.PiknikPreferences
-import com.esdsquad.piknik.storage.perferences.PreferencesModel
-import com.esdsquad.piknik.storage.perferences.prefExample
+import com.esdsquad.piknik.storage.perferences.prefFirst
 import com.esdsquad.piknik.storage.persistence.PiknikDatabase
 import com.esdsquad.piknik.storage.persistence.PiknikEntity
 
@@ -14,12 +14,12 @@ class PiknikRepository(
     suspend fun fetchGet() = api.exampleGet()
     suspend fun fetchPost() = api.examplePost()
 
-    fun savePreferences(example: String?) {
-        pref.put(prefExample, example!!)
+    fun savePreferencesOnboarding(first: Boolean?) {
+        pref.put(prefFirst, first!!)
     }
 
-    fun getPreferences(): PreferencesModel {
-        return PreferencesModel(pref.getString(prefExample))
+    fun getPreferencesOnboarding(): OnboardingPreferencesModel {
+        return OnboardingPreferencesModel(pref.getBoolean(prefFirst))
     }
 
     suspend fun saveDataExample(piknikEntity: PiknikEntity) {

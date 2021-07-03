@@ -20,7 +20,16 @@ class PiknikPreferences(context: Context) {
             .apply()
     }
 
+    fun put(key: String, value: Boolean) {
+        editor.putBoolean(key, value)
+            .apply()
+    }
+
     fun getString(key: String): String? {
         return sharedPref.getString(key, null)
+    }
+
+    fun getBoolean(key: String): Boolean? {
+        return sharedPref.getBoolean(key, false)
     }
 }

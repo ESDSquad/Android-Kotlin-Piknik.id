@@ -1,15 +1,24 @@
 package com.esdsquad.piknik.data.view.fragment
 
+
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import com.esdsquad.piknik.R
+import com.esdsquad.piknik.data.view.adapter.ImageSliderAdapter
 import com.esdsquad.piknik.databinding.FragmentBerandaBinding
+
 
 class BerandaFragment : Fragment() {
 
     private lateinit var binding: FragmentBerandaBinding
+    var images = intArrayOf(
+        R.drawable.iklan,
+        R.drawable.iklan_1,
+        R.drawable.iklan_2
+    )
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -28,7 +37,9 @@ class BerandaFragment : Fragment() {
     }
 
     private fun setupView() {
-        //TODO("Not yet implemented")
+        val adapter = ImageSliderAdapter(requireContext(), images)
+        binding.viewpager.adapter = adapter
+        binding.dotsIndicator.setViewPager(binding.viewpager)
     }
 
     private fun setupViewModel() {

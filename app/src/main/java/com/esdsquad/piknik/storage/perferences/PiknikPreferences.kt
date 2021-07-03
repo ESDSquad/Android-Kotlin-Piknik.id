@@ -30,6 +30,6 @@ class PiknikPreferences(context: Context) {
     }
 
     fun getBoolean(key: String): Boolean? {
-        return sharedPref.getBoolean(key, false)
+        return sharedPref.getBoolean(key, true)
     }
 }

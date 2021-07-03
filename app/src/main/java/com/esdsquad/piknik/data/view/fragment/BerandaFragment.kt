@@ -5,17 +5,17 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.esdsquad.piknik.databinding.FragmentExampleBinding
+import com.esdsquad.piknik.databinding.FragmentBerandaBinding
 
-class ExampleFragment : Fragment() {
+class BerandaFragment : Fragment() {
 
-    private lateinit var binding: FragmentExampleBinding
+    private lateinit var binding: FragmentBerandaBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentExampleBinding.inflate(inflater, container, false)
+        binding = FragmentBerandaBinding.inflate(inflater, container, false)
         return binding.root
     }
 
@@ -42,5 +42,4 @@ class ExampleFragment : Fragment() {
     private fun setupObserver() {
         //TODO("Not yet implemented")
     }
-
 }

@@ -7,7 +7,9 @@ import android.view.ViewGroup
 import android.view.WindowManager
 import androidx.fragment.app.Fragment
 import com.esdsquad.piknik.R
+import com.esdsquad.piknik.data.view.adapter.PesananAdapter
 import com.esdsquad.piknik.databinding.FragmentPesananBinding
+import com.google.android.material.tabs.TabLayoutMediator
 
 class PesananFragment : Fragment() {
 
@@ -31,6 +33,15 @@ class PesananFragment : Fragment() {
 
     private fun setupView() {
         binding.tvLayoutToolbar.tvToolbar.text = "Pesanan"
+        val tabTitles = arrayListOf("Dalam Proses", "Riwayat")
+        val tabAdapter = PesananAdapter(
+            requireActivity().supportFragmentManager,
+            requireActivity().lifecycle
+        )
+        binding.viewPager.adapter = tabAdapter
+        TabLayoutMediator(binding.tbLayout, binding.viewPager) { tab, position ->
+            tab.text = tabTitles[position]
+        }.attach()
     }
 
     @Suppress("DEPRECATION")

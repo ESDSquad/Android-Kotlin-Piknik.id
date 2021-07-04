@@ -4,7 +4,9 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.WindowManager
 import androidx.fragment.app.Fragment
+import com.esdsquad.piknik.R
 import com.esdsquad.piknik.databinding.FragmentAkunSayaBinding
 
 class AkunSayaFragment : Fragment() {
@@ -28,7 +30,31 @@ class AkunSayaFragment : Fragment() {
     }
 
     private fun setupView() {
-        //TODO("Not yet implemented")
+        binding.tvLayoutToolbar.tvToolbar.text = "Akun Saya"
+    }
+
+    @Suppress("DEPRECATION")
+    override fun onStart() {
+        super.onStart()
+        val window = requireActivity().window
+        window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS)
+        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
+        window.statusBarColor = requireActivity().resources.getColor(R.color.colorPrimary)
+
+        val view = window.decorView
+        view.systemUiVisibility = 0
+    }
+
+    @Suppress("DEPRECATION")
+    override fun onPause() {
+        super.onPause()
+        val window = requireActivity().window
+        window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS)
+        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
+        window.statusBarColor = requireActivity().resources.getColor(R.color.colorLight)
+
+        val view = window.decorView
+        view.systemUiVisibility = View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR
     }
 
     private fun setupViewModel() {

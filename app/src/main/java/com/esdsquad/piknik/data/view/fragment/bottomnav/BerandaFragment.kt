@@ -5,25 +5,35 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.esdsquad.piknik.R
 import com.esdsquad.piknik.data.model.ArticelModel
 import com.esdsquad.piknik.data.view.adapter.ArticelAdapter
 import com.esdsquad.piknik.data.view.adapter.ImageSliderAdapter
+import com.esdsquad.piknik.data.view.adapter.PopulerAdapter
+import com.esdsquad.piknik.data.viewmodel.MainViewModel
 import com.esdsquad.piknik.databinding.FragmentBerandaBinding
+import com.esdsquad.piknik.network.Resource
+import com.esdsquad.piknik.network.response.TempatWisataResponse
 
 
 class BerandaFragment : Fragment() {
 
     private lateinit var binding: FragmentBerandaBinding
+    private val viewModel by lazy { ViewModelProvider(requireActivity()).get(MainViewModel::class.java) }
+
     var images = intArrayOf(
         R.drawable.iklan,
         R.drawable.iklan_1,
         R.drawable.iklan_2
     )
 
-    private lateinit var adapter: ArticelAdapter
+    private lateinit var adapterArticel: ArticelAdapter
+    private lateinit var adapterPopuler: PopulerAdapter
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -37,9 +47,8 @@ class BerandaFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         setupView()
         setupRecycerView()
-        setupViewModel()
-        setupListener()
-        setupObserver()
+//        setupListener()
+//        setupObserver()
     }
 
     private fun setupRecycerView() {
@@ -65,8 +74,15 @@ class BerandaFragment : Fragment() {
                 "https://ik.imagekit.io/tvlk/blog/2020/01/Staycation-1-Pixabay.jpg"
             )
         )
-        adapter = ArticelAdapter(listAdapter)
-        binding.listArtikel.adapter = adapter
+        adapterArticel = ArticelAdapter(listAdapter)
+        binding.listArtikel.adapter = adapterArticel
+
+//        adapterPopuler = PopulerAdapter(arrayListOf(), object : PopulerAdapter.OnAdapterListener {
+//            override fun onClick(result: ArrayList<TempatWisataResponse.TempatWisataResponseItem>) {
+//
+//            }
+//        })
+//        binding.listPopuler.adapter = adapterPopuler
     }
 
     private fun setupView() {
@@ -91,15 +107,23 @@ class BerandaFragment : Fragment() {
         }
     }
 
-    private fun setupViewModel() {
-        //TODO("Not yet implemented")
-    }
-
     private fun setupListener() {
-        //TODO("Not yet implemented")
+        viewModel.getTempatWisata()
     }
 
     private fun setupObserver() {
-        //TODO("Not yet implemented")
+        viewModel.tempatWisataResponse.observe(viewLifecycleOwner, Observer {
+            when (it) {
+                is Resource.Loading -> {
+
+                }
+                is Resource.Success -> {
+                    adapterPopuler.setData(it.data!!.tempatWisataResponse as List<TempatWisataResponse.TempatWisataResponseItem>)
+                }
+                is Resource.Error -> {
+                    Toast.makeText(context, it.message, Toast.LENGTH_LONG).show()
+                }
+            }
+        })
     }
 }

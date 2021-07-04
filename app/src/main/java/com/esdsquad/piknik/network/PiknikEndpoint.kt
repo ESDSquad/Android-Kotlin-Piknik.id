@@ -1,14 +1,35 @@
 package com.esdsquad.piknik.network
 
-import com.esdsquad.piknik.network.response.ExampleResponse
+import com.esdsquad.piknik.network.response.LoginResponse
+import com.esdsquad.piknik.network.response.ProfileResponse
+import com.esdsquad.piknik.network.response.RegisterResponse
+import com.esdsquad.piknik.network.response.TempatWisataResponse
 import retrofit2.Response
-import retrofit2.http.GET
-import retrofit2.http.POST
+import retrofit2.http.*
 
 interface PiknikEndpoint {
-    @GET("")
-    suspend fun exampleGet(): Response<ExampleResponse>
 
-    @POST("")
-    suspend fun examplePost(): Response<ExampleResponse>
+    @FormUrlEncoded
+    @POST("register")
+    suspend fun register(
+        @Field("nama_lengkap") nama_lengkap: String,
+        @Field("email") email: String,
+        @Field("password") password: String,
+        @Field("password_confirmation") password_confirmation: String
+    ): Response<RegisterResponse>
+
+    @FormUrlEncoded
+    @POST("login")
+    suspend fun login(
+        @Field("email") email: String,
+        @Field("password") password: String
+    ): Response<LoginResponse>
+
+    @GET("profile")
+    suspend fun getProfile(
+        @Header("Authorization") authorization: String
+    ): Response<ProfileResponse>
+
+    @GET("tempatwisata")
+    suspend fun getTempatWisata(): Response<TempatWisataResponse>
 }

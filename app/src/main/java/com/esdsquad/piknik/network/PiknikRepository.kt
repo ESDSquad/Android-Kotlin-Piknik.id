@@ -1,16 +1,22 @@
 package com.esdsquad.piknik.network
 
 import com.esdsquad.piknik.storage.perferences.*
-import com.esdsquad.piknik.storage.persistence.PiknikDatabase
-import com.esdsquad.piknik.storage.persistence.PiknikEntity
 
 class PiknikRepository(
     private val api: PiknikEndpoint,
     private val pref: PiknikPreferences,
-    private val db: PiknikDatabase
 ) {
-    suspend fun fetchGet() = api.exampleGet()
-    suspend fun fetchPost() = api.examplePost()
+    suspend fun register(
+        nama_lengkap: String,
+        email: String,
+        password: String,
+        password_confirmation: String
+    ) = api.register(nama_lengkap, email, password, password_confirmation)
+
+    suspend fun login(email: String, password: String) = api.login(email, password)
+    suspend fun getProfile(authorization: String) = api.getProfile(authorization)
+    suspend fun getTempatWisata() = api.getTempatWisata()
+
 
     fun savePreferencesOnboarding(first: Boolean?) {
         pref.put(prefFirst, first!!)
@@ -28,28 +34,20 @@ class PiknikRepository(
         return TokenPreferencesModel(pref.getString(prefToken))
     }
 
-    fun savePreferencesCredential(username: String?, password: String?) {
-        pref.put(prefUsername, username!!)
-        pref.put(prefPassword, password!!)
+    fun savePreferencesCredential(id: String, nama_lengkap: String, email: String) {
+        pref.put(prefUserId, id)
+        pref.put(prefNamaLengkap, nama_lengkap)
+        pref.put(prefEmail, email)
     }
 
     fun getPreferencesCredential(): List<CredentialPreferencesModel> {
         return listOf<CredentialPreferencesModel>(
             CredentialPreferencesModel(
-                username = pref.getString(prefUsername), password = pref.getString(
-                    prefPassword
-                )
+                id = pref.getString(prefUserId),
+                nama_lengkap = pref.getString(prefNamaLengkap),
+                email = pref.getString(prefEmail)
             )
         )
     }
 
-    suspend fun saveDataExample(piknikEntity: PiknikEntity) {
-        db.exampleDao().insert(piknikEntity)
-    }
-
-    fun getDataExample() = db.exampleDao().select()
-
-    suspend fun deleteDataExample() {
-        db.exampleDao().deleteAll()
-    }
 }

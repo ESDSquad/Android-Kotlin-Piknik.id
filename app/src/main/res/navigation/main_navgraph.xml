@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_berandaFragment_to_populerFragment"
             app:destination="@id/populerFragment" />
+        <action
+            android:id="@+id/action_berandaFragment_to_provinceFragment"
+            app:destination="@id/provinceFragment" />
     </fragment>
     <fragment
         android:id="@+id/pesananFragment"
@@ -34,4 +37,22 @@
         android:name="com.esdsquad.piknik.data.view.fragment.PopulerFragment"
         android:label="fragment_populer"
         tools:layout="@layout/fragment_populer" />
+    <fragment
+        android:id="@+id/cityFragment"
+        android:name="com.esdsquad.piknik.data.view.fragment.CityFragment"
+        android:label="fragment_city"
+        tools:layout="@layout/fragment_city">
+        <action
+            android:id="@+id/action_cityFragment_to_berandaFragment"
+            app:destination="@id/berandaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/provinceFragment"
+        android:name="com.esdsquad.piknik.data.view.fragment.ProvinceFragment"
+        android:label="fragment_province"
+        tools:layout="@layout/fragment_province">
+        <action
+            android:id="@+id/action_provinceFragment_to_cityFragment"
+            app:destination="@id/cityFragment" />
+    </fragment>
 </navigation>

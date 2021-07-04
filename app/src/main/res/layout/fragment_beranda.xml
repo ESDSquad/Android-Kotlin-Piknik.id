@@ -176,5 +176,40 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ivPromo" />
 
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/appCompatTextView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="Populer di"
+        android:textColor="@color/colorBlack"
+        android:textSize="14dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvBumper" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="Bandung"
+        android:textColor="@color/colorPrimary"
+        android:textSize="14dp"
+        app:layout_constraintStart_toEndOf="@+id/appCompatTextView6"
+        app:layout_constraintTop_toBottomOf="@+id/tvBumper" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/list_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="28dp"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintTop_toBottomOf="@+id/appCompatTextView6"
+        tools:listitem="@layout/adapter_list_populer" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

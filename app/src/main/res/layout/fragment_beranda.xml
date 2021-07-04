@@ -76,4 +76,105 @@
         app:progressMode="true"
         app:selectedDotColor="@color/colorPrimary" />
 
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivBumper"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/icon_rounded_corner"
+        android:padding="15dp"
+        android:src="@drawable/ic_bumper"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dots_indicator" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivOpenTrip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/icon_rounded_corner"
+        android:padding="15dp"
+        android:src="@drawable/ic_open_trip"
+        app:layout_constraintStart_toEndOf="@+id/ivBumper"
+        app:layout_constraintTop_toBottomOf="@+id/dots_indicator" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivNimbrung"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/icon_rounded_corner"
+        android:padding="16dp"
+        android:src="@drawable/ic_nimbrung"
+        app:layout_constraintStart_toEndOf="@+id/ivOpenTrip"
+        app:layout_constraintTop_toBottomOf="@+id/dots_indicator" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivPromo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/icon_rounded_corner"
+        android:padding="13dp"
+        android:src="@drawable/ic_promo"
+        app:layout_constraintStart_toEndOf="@+id/ivNimbrung"
+        app:layout_constraintTop_toBottomOf="@+id/dots_indicator" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvBumper"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="14dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="BumPer"
+        android:textColor="@color/colorPrimary"
+        android:textSize="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivBumper" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvOpentrip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="137dp"
+        android:layout_marginTop="14dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Open Trip"
+        android:textColor="@color/colorPrimary"
+        android:textSize="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivOpenTrip" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvNimbrung"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="228dp"
+        android:layout_marginTop="14dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Nimbrung"
+        android:textColor="@color/colorPrimary"
+        android:textSize="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivNimbrung" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvPromo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="328dp"
+        android:layout_marginTop="14dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Promo"
+        android:textColor="@color/colorPrimary"
+        android:textSize="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivPromo" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

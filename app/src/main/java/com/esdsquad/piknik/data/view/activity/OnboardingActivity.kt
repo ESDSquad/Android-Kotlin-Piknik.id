@@ -36,6 +36,12 @@ class OnboardingActivity : AppCompatActivity(), KodeinAware {
         val adapter = OnboardingAdapter(supportFragmentManager, lifecycle)
         binding.viewpager.adapter = adapter
         binding.dotsIndicator.setViewPager2(binding.viewpager)
+
+    }
+
+    private fun setupViewModelAndSetPref() {
+        viewModel =
+            ViewModelProvider(this, onboardingViewModelFactory).get(OnboardingViewModel::class.java)
         binding.tvSkip.setOnClickListener {
             startActivity(
                 Intent(
@@ -43,13 +49,8 @@ class OnboardingActivity : AppCompatActivity(), KodeinAware {
                     MainActivity::class.java
                 )
             )
+            viewModel.savePrefFist(false)
             finish()
         }
-    }
-
-    private fun setupViewModelAndSetPref() {
-        viewModel =
-            ViewModelProvider(this, onboardingViewModelFactory).get(OnboardingViewModel::class.java)
-        viewModel.savePrefFist(false)
     }
 }

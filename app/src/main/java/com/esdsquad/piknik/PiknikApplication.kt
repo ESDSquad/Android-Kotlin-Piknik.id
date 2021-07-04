@@ -1,6 +1,7 @@
 package com.esdsquad.piknik
 
 import android.app.Application
+import com.esdsquad.piknik.data.viewmodel.factory.AuthenticationViewModelFactory
 import com.esdsquad.piknik.data.viewmodel.factory.OnboardingViewModelFactory
 import com.esdsquad.piknik.network.PiknikEndpoint
 import com.esdsquad.piknik.network.PiknikRepository
@@ -26,6 +27,7 @@ class PiknikApplication : Application(), KodeinAware {
         bind() from singleton { PiknikDatabase(instance()) }
         bind() from singleton { PiknikRepository(instance(), instance(), instance()) }
         bind() from provider { OnboardingViewModelFactory(instance()) }
+        bind() from provider { AuthenticationViewModelFactory(instance()) }
     }
 
     override fun onCreate() {

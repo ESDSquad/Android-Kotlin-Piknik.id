@@ -29,6 +29,7 @@ class PopulerFragment : Fragment() {
     }
 
     private fun setupView() {
+        binding.tvLayoutToolbar.tvToolbar.text = "Populer di Bandung"
         binding.tvLayoutToolbar.ivBack.setOnClickListener {
             findNavController().popBackStack()
         }

@@ -6,7 +6,7 @@ import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
-private const val baseUrl = "https://api.example.com/"
+private const val baseUrl = "http://192.168.1.13:8000/api/"
 
 object RetrofitClient {
     fun getClient(): PiknikEndpoint {
@@ -16,11 +16,6 @@ object RetrofitClient {
 
         val client = OkHttpClient.Builder()
             .addInterceptor(logging)
-//            .addInterceptor { chain ->
-//                val request = chain.request().newBuilder()
-//                    .addHeader("Authorization", "token ${BuildConfig.TOKEN}").build()
-//                chain.proceed(request)
-//            }
             .build()
 
         val gson = GsonBuilder().serializeNulls().create()

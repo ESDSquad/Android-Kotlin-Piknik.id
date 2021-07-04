@@ -25,7 +25,7 @@ class PiknikApplication : Application(), KodeinAware {
         bind<LokasiEndpoint>() with singleton { LokasiClient.getClientLokasi() }
         bind() from singleton { PiknikPreferences(instance()) }
         bind() from singleton { PiknikDatabase(instance()) }
-        bind() from singleton { PiknikRepository(instance(), instance(), instance()) }
+        bind() from singleton { PiknikRepository(instance(), instance()) }
         bind() from singleton { LokasiRepository(instance(), instance()) }
         bind() from provider { OnboardingViewModelFactory(instance()) }
         bind() from provider { AuthenticationViewModelFactory(instance()) }

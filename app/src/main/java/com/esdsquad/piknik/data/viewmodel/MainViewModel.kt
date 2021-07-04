@@ -4,19 +4,24 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.esdsquad.piknik.network.LokasiRepository
+import com.esdsquad.piknik.network.PiknikRepository
 import com.esdsquad.piknik.network.Resource
 import com.esdsquad.piknik.network.response.KotaResponse
 import com.esdsquad.piknik.network.response.ProvinsiResponse
+import com.esdsquad.piknik.network.response.TempatWisataResponse
 import com.esdsquad.piknik.storage.perferences.LokasiPreferencesModel
 import kotlinx.coroutines.launch
 
 class MainViewModel(
-    val repositoryLokasi: LokasiRepository
+    val repositoryLokasi: LokasiRepository,
+    val repository: PiknikRepository
 ) : ViewModel() {
 
     val provinsiResponse: MutableLiveData<Resource<ProvinsiResponse>> = MutableLiveData()
     val kotaResponse: MutableLiveData<Resource<KotaResponse>> = MutableLiveData()
     val preferencesLokasi: MutableLiveData<List<LokasiPreferencesModel>> = MutableLiveData()
+    val tempatWisataResponse: MutableLiveData<Resource<TempatWisataResponse>> = MutableLiveData()
+
 
     fun fetchProvinsi() = viewModelScope.launch {
         provinsiResponse.value = Resource.Loading()
@@ -35,6 +40,16 @@ class MainViewModel(
             kotaResponse.value = Resource.Success(response.body()!!)
         } catch (e: Exception) {
             kotaResponse.value = Resource.Error(e.message.toString())
+        }
+    }
+
+    fun getTempatWisata() = viewModelScope.launch {
+        tempatWisataResponse.value = Resource.Loading()
+        try {
+            val response = repository.getTempatWisata()
+            tempatWisataResponse.value = Resource.Success(response.body()!!)
+        } catch (e: Exception) {
+            tempatWisataResponse.value = Resource.Error(e.message.toString())
         }
     }
 

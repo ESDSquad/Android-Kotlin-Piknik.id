@@ -10,10 +10,7 @@ import com.esdsquad.piknik.storage.persistence.PiknikDatabase
 import org.kodein.di.Kodein
 import org.kodein.di.KodeinAware
 import org.kodein.di.android.x.androidXModule
-import org.kodein.di.generic.bind
-import org.kodein.di.generic.instance
-import org.kodein.di.generic.provider
-import org.kodein.di.generic.singleton
+import org.kodein.di.generic.*
 import timber.log.Timber
 
 class PiknikApplication : Application(), KodeinAware {
@@ -29,7 +26,7 @@ class PiknikApplication : Application(), KodeinAware {
         bind() from singleton { LokasiRepository(instance(), instance()) }
         bind() from provider { OnboardingViewModelFactory(instance()) }
         bind() from provider { AuthenticationViewModelFactory(instance()) }
-        bind() from provider { MainViewModelFactory(instance()) }
+        bind() from singleton { MainViewModelFactory(instance(), instance()) }
     }
 
     override fun onCreate() {

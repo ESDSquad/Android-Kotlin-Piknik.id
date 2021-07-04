@@ -33,7 +33,7 @@ class PesananFragment : Fragment() {
 
     private fun setupView() {
         binding.tvLayoutToolbar.tvToolbar.text = "Pesanan"
-        val tabTitles = arrayListOf("Dalam Proses", "Riwayat")
+        val tabTitles = arrayListOf("Riwayat", "Dalam Proses")
         val tabAdapter = PesananAdapter(
             requireActivity().supportFragmentManager,
             requireActivity().lifecycle

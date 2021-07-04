@@ -52,5 +52,26 @@
     <string name="review_dummy">“Tempatnya sejuk, tenda bersih dan nyaman, makanan yang ..."</string>
 
     <string name="dummy_dekripsi">Wisata Batu Kuda berlokasi di lereng Gunung Manglayang, tepatnya di Kampung Cikoneng, Desa Cibiru Wetan, Kecamatan Cileunyi, Kabupaten Bandung. Tempat wisata batu kuda manglayang saat ini merupakan destinasi favorit wisata para pecinta alam yang ingin menikmati keasrian alam bandung.</string>
+    <string name="tittle_pemesanan">Batu Kuda Manglayang</string>
+    <string name="check_in_pemesanan">Check-in</string>
+    <string name="check_out_pemesanan">check-out</string>
+    <string name="tanggal_checkin_pemesanan">Minggu,  4 Juli 2021</string>
+    <string name="tanggal_checkou_pemesanan">Senin, 5 Juli 2021</string>
+    <string name="paket_pemesanan">Camping Dome Twin</string>
+    <string name="Tenda_pemesanan">1 Tenda Camping Dome</string>
+    <string name="jumlah_orang_pemesanan">2 Dewasa</string>
+    <string name="makan_pemesanan">Termasuk makan 3 kali</string>
+    <string name="caution_pemesanan">Sehubungan dengan situasi COVID-19, kami mewajibkan untuk melampirkan keterangan negative COVID-19 atau Rapid Antigen dengan mitra kami.</string>
+    <string name="banner">Data Pemesan</string>
+    <string name="nama_data_pemesan">Satrio Rahman Wicaksono</string>
+    <string name="email_data_pemesan">iam.satriorahman28@gmail.com</string>
+    <string name="banner_detailkesehatan">Detail Kesehatan</string>
+    <string name="banner_suratkesehatan">Surat keterangan Rapid Antigen / PCR Swab Test (Negative) dalam kurun waktu maksimal 48 jam</string>
+    <string name="checkbox_surat_kesehatan">Saya belum punya surat keterangan</string>
+    <string name="hargakesehatan_pemesanan">Rp 300.000</string>
+    <string name="total_banner">Total</string>
+    <string name="point_pemesanan">10.000 Points</string>
+    <string name="dapatkan">Dapatkan</string>
+    <string name="bayar_pemesanan">Bayar Pemesanan</string>
 
 </resources>

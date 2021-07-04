@@ -41,7 +41,7 @@
         android:fontFamily="@font/poppins"
         android:hint="@string/email"
         android:paddingHorizontal="17dp"
-        android:paddingVertical="6dp"
+        android:paddingVertical="8dp"
         android:textSize="14sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/appCompatTextView5" />
@@ -56,13 +56,13 @@
         android:fontFamily="@font/poppins"
         android:hint="@string/password"
         android:paddingHorizontal="17dp"
-        android:paddingVertical="6dp"
+        android:paddingVertical="8dp"
         android:textSize="14sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etEmail" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/appCompatButton"
+        android:id="@+id/btn_login"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="33dp"
@@ -86,7 +86,7 @@
         android:textColor="@color/colorBlack"
         android:textSize="12sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/appCompatButton" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_login" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tvBuat"
@@ -99,6 +99,6 @@
         android:textColor="@color/colorPrimary"
         android:textSize="12sp"
         app:layout_constraintStart_toEndOf="@+id/tvBelum"
-        app:layout_constraintTop_toBottomOf="@+id/appCompatButton" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_login" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

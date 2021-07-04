@@ -1,8 +1,10 @@
 package com.esdsquad.piknik.data.view.activity
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.NavOptions
 import androidx.navigation.findNavController
@@ -79,10 +81,20 @@ class MainActivity : AppCompatActivity(), KodeinAware {
     }
 
     private fun setupListener() {
-        //TODO("Not yet implemented")
+        viewModel.getPreferencesToken()
     }
 
     private fun setupObserver() {
-        //TODO("Not yet implemented")
+        viewModel.preferencesToken.observe(this, Observer {
+            if (it.token.isNullOrBlank()) {
+                startActivity(
+                    Intent(
+                        this@MainActivity,
+                        AuthenticationActivity::class.java
+                    )
+                )
+                finish()
+            }
+        })
     }
 }

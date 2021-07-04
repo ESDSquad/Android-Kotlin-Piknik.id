@@ -16,6 +16,9 @@
         <action
             android:id="@+id/action_berandaFragment_to_provinceFragment"
             app:destination="@id/provinceFragment" />
+        <action
+            android:id="@+id/action_berandaFragment_to_nimbrungFragment"
+            app:destination="@id/nimbrungFragment" />
     </fragment>
     <fragment
         android:id="@+id/pesananFragment"
@@ -55,4 +58,9 @@
             android:id="@+id/action_provinceFragment_to_cityFragment"
             app:destination="@id/cityFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/nimbrungFragment"
+        android:name="com.esdsquad.piknik.data.view.fragment.NimbrungFragment"
+        android:label="fragment_nimbrung"
+        tools:layout="@layout/fragment_nimbrung" />
 </navigation>

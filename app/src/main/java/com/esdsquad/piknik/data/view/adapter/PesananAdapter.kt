@@ -12,7 +12,7 @@ class PesananAdapter(
 ) : FragmentStateAdapter(fragmentManager, lifecycle) {
 
     private val fragments: ArrayList<Fragment> = arrayListOf(
-        DalamProsesFragment(), RiwayatFragment()
+        RiwayatFragment(), DalamProsesFragment(),
     )
 
     override fun getItemCount(): Int {

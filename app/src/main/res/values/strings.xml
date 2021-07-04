@@ -33,7 +33,8 @@
     <string name="belum_punya_akun">Belum punya akun?</string>
     <string name="buat_dulu">Buat dulu</string>
 
-    <string name="lokasi_dummy">Bandung, West Java</string>
+    <string name="lokasi_dummy">Bandung</string>
+    <string name="lihat_semua">Lihat Semua</string>
     <string name="nama_dummy">Hi, Satrio</string>
     <string name="bumper">BumPer</string>
     <string name="open_trip">Open Trip</string>
@@ -41,5 +42,7 @@
     <string name="promo">Promo</string>
     <string name="populer_di">Populer di</string>
     <string name="artikel_buat_kamu">Artikel Buat Kamu</string>
+
+    <string name="toolbar_dummy">toolbar</string>
 
 </resources>

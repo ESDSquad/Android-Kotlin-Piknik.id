@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.esdsquad.piknik.R
 import com.esdsquad.piknik.data.view.adapter.ImageSliderAdapter
 import com.esdsquad.piknik.databinding.FragmentBerandaBinding
@@ -40,6 +41,10 @@ class BerandaFragment : Fragment() {
         val adapter = ImageSliderAdapter(requireContext(), images)
         binding.viewpager.adapter = adapter
         binding.dotsIndicator.setViewPager(binding.viewpager)
+
+        binding.tvLihatSemua.setOnClickListener {
+            findNavController().navigate(R.id.action_berandaFragment_to_populerFragment)
+        }
     }
 
     private fun setupViewModel() {

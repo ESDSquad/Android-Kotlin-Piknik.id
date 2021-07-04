@@ -30,7 +30,6 @@ class MainActivity : AppCompatActivity(), KodeinAware {
         setupView()
         setupViewModel()
         setupListener()
-        setupObserver()
     }
 
     private fun setupView() {

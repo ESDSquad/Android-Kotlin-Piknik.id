@@ -9,7 +9,11 @@
         android:id="@+id/berandaFragment"
         android:name="com.esdsquad.piknik.data.view.fragment.bottomnav.BerandaFragment"
         android:label="fragment_beranda"
-        tools:layout="@layout/fragment_beranda" />
+        tools:layout="@layout/fragment_beranda">
+        <action
+            android:id="@+id/action_berandaFragment_to_populerFragment"
+            app:destination="@id/populerFragment" />
+    </fragment>
     <fragment
         android:id="@+id/pesananFragment"
         android:name="com.esdsquad.piknik.data.view.fragment.bottomnav.PesananFragment"
@@ -25,4 +29,9 @@
         android:name="com.esdsquad.piknik.data.view.fragment.bottomnav.AkunSayaFragment"
         android:label="fragment_akun_saya"
         tools:layout="@layout/fragment_akun_saya" />
+    <fragment
+        android:id="@+id/populerFragment"
+        android:name="com.esdsquad.piknik.data.view.fragment.PopulerFragment"
+        android:label="fragment_populer"
+        tools:layout="@layout/fragment_populer" />
 </navigation>

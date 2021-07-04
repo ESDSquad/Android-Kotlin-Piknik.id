@@ -73,5 +73,13 @@
     <string name="point_pemesanan">10.000 Points</string>
     <string name="dapatkan">Dapatkan</string>
     <string name="bayar_pemesanan">Bayar Pemesanan</string>
+    <string name="umum">Umum</string>
+    <string name="pengaturan_notifikasi">Pengaturan Notifikasi</string>
+    <string name="pengturan_kota">Kota</string>
+    <string name="pengaturan_keamanan">Pengaturan Keamanan</string>
+    <string name="akun_dan_keamanan">Akun dan Keamanan</string>
+    <string name="tentang_kami">Tentang Kami</string>
+    <string name="tentang_piknik">Tentang piknik.id</string>
+    <string name="Keluar">Keluar</string>
 
 </resources>

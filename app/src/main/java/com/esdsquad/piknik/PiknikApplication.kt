@@ -4,10 +4,7 @@ import android.app.Application
 import com.esdsquad.piknik.data.viewmodel.factory.AuthenticationViewModelFactory
 import com.esdsquad.piknik.data.viewmodel.factory.MainViewModelFactory
 import com.esdsquad.piknik.data.viewmodel.factory.OnboardingViewModelFactory
-import com.esdsquad.piknik.network.LokasiRepository
-import com.esdsquad.piknik.network.PiknikEndpoint
-import com.esdsquad.piknik.network.PiknikRepository
-import com.esdsquad.piknik.network.RetrofitClient
+import com.esdsquad.piknik.network.*
 import com.esdsquad.piknik.storage.perferences.PiknikPreferences
 import com.esdsquad.piknik.storage.persistence.PiknikDatabase
 import org.kodein.di.Kodein
@@ -25,6 +22,7 @@ class PiknikApplication : Application(), KodeinAware {
         import(androidXModule(this@PiknikApplication))
 
         bind<PiknikEndpoint>() with singleton { RetrofitClient.getClient() }
+        bind<LokasiEndpoint>() with singleton { LokasiClient.getClientLokasi() }
         bind() from singleton { PiknikPreferences(instance()) }
         bind() from singleton { PiknikDatabase(instance()) }
         bind() from singleton { PiknikRepository(instance(), instance(), instance()) }

@@ -45,6 +45,10 @@ class BerandaFragment : Fragment() {
         binding.tvLihatSemua.setOnClickListener {
             findNavController().navigate(R.id.action_berandaFragment_to_populerFragment)
         }
+
+        binding.tvLokasi.setOnClickListener {
+            findNavController().navigate(R.id.action_berandaFragment_to_provinceFragment)
+        }
     }
 
     private fun setupViewModel() {

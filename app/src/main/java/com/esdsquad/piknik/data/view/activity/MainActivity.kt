@@ -11,7 +11,9 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.setupWithNavController
 import com.esdsquad.piknik.R
 import com.esdsquad.piknik.data.viewmodel.AuthenticationViewModel
+import com.esdsquad.piknik.data.viewmodel.MainViewModel
 import com.esdsquad.piknik.data.viewmodel.factory.AuthenticationViewModelFactory
+import com.esdsquad.piknik.data.viewmodel.factory.MainViewModelFactory
 import com.esdsquad.piknik.databinding.ActivityMainBinding
 import org.kodein.di.KodeinAware
 import org.kodein.di.android.kodein
@@ -22,6 +24,7 @@ class MainActivity : AppCompatActivity(), KodeinAware {
     private val binding: ActivityMainBinding by lazy { ActivityMainBinding.inflate(layoutInflater) }
     override val kodein by kodein()
     private val authenticationViewModelFactory: AuthenticationViewModelFactory by instance()
+    private val mainViewModelFactory: MainViewModelFactory by instance()
     private lateinit var viewModel: AuthenticationViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -77,6 +80,8 @@ class MainActivity : AppCompatActivity(), KodeinAware {
                 this,
                 authenticationViewModelFactory
             ).get(AuthenticationViewModel::class.java)
+
+        ViewModelProvider(this, mainViewModelFactory).get(MainViewModel::class.java)
     }
 
     private fun setupListener() {

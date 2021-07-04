@@ -19,4 +19,23 @@ class CityFragment : Fragment() {
         return binding.root
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        setupListener()
+        setupRecyclerView()
+        setupObserver()
+    }
+
+    private fun setupListener() {
+        TODO("Not yet implemented")
+    }
+
+    private fun setupRecyclerView() {
+        TODO("Not yet implemented")
+    }
+
+    private fun setupObserver() {
+        TODO("Not yet implemented")
+    }
+
 }

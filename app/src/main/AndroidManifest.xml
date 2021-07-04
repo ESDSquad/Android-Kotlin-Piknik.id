@@ -3,6 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.esdsquad.piknik">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:name=".PiknikApplication"
         android:allowBackup="true"

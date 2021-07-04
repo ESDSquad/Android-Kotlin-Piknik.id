@@ -6,13 +6,14 @@ data class ProvinsiResponse(
 
 	@field:SerializedName("provinsi")
 	val provinsi: List<ProvinsiItem?>? = null
-)
+) {
+	data class ProvinsiItem(
 
-data class ProvinsiItem(
+		@field:SerializedName("nama")
+		val nama: String? = null,
 
-	@field:SerializedName("nama")
-	val nama: String? = null,
+		@field:SerializedName("id")
+		val id: Int? = null
+	)
 
-	@field:SerializedName("id")
-	val id: Int? = null
-)
+}

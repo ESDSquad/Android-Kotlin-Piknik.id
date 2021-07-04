@@ -3,6 +3,7 @@ package com.esdsquad.piknik.network
 import com.esdsquad.piknik.network.response.LoginResponse
 import com.esdsquad.piknik.network.response.ProfileResponse
 import com.esdsquad.piknik.network.response.RegisterResponse
+import com.esdsquad.piknik.network.response.TempatWisataResponse
 import retrofit2.Response
 import retrofit2.http.*
 
@@ -28,4 +29,7 @@ interface PiknikEndpoint {
     suspend fun getProfile(
         @Header("Authorization") authorization: String
     ): Response<ProfileResponse>
+
+    @GET("tempatwisata")
+    suspend fun getTempatWisata(): Response<TempatWisataResponse>
 }

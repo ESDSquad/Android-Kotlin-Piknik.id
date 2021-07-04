@@ -15,6 +15,7 @@ class PiknikRepository(
 
     suspend fun login(email: String, password: String) = api.login(email, password)
     suspend fun getProfile(authorization: String) = api.getProfile(authorization)
+    suspend fun getTempatWisata() = api.getTempatWisata()
 
 
     fun savePreferencesOnboarding(first: Boolean?) {

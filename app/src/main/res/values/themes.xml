@@ -9,7 +9,7 @@
     <style name="Theme.MVVMProjectStarter.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
-        <item name="android:statusBarColor">@color/colorWhite</item>
+        <item name="android:statusBarColor">#fff</item>
         <item name="android:windowLightStatusBar" tools:ignore="NewApi">true</item>
     </style>
 

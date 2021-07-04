@@ -18,5 +18,7 @@
     <string name="subtitle_3">Nikmati liburanmu dengan tetap menjaga protokol kesehatan yang diterapkan oleh pemerintah</string>
     <string name="persiapan_liburanmu">Persiapan liburanmu</string>
     <string name="chat">Chat</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
 
 </resources>

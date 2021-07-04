@@ -1,215 +1,242 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".data.view.fragment.BerandaFragment">
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/appCompatTextView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="40dp"
-        android:fontFamily="@font/poppins_semibold"
-        android:text="Hi, Satrio"
-        android:textColor="@color/colorWhite"
-        android:textSize="14sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/appCompatTextView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="2dp"
-        android:drawableStart="@drawable/ic_maps"
-        android:drawablePadding="8dp"
-        android:fontFamily="@font/poppins_medium"
-        android:text="Bandung, West Java"
-        android:textColor="@color/colorBlack"
-        android:textSize="14sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/appCompatTextView3" />
-
-    <androidx.appcompat.widget.AppCompatTextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="52dp"
-        android:layout_marginEnd="24dp"
-        android:drawableStart="@drawable/ic_chat"
-        android:drawablePadding="6dp"
-        android:fontFamily="@font/poppins_semibold"
-        android:text="@string/chat"
-        android:textColor="@color/colorPrimary"
-        android:textSize="12sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <androidx.viewpager.widget.ViewPager
-        android:id="@+id/viewpager"
-        android:layout_width="353dp"
-        android:layout_height="169dp"
-        android:layout_marginTop="25dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/appCompatTextView4">
-
-    </androidx.viewpager.widget.ViewPager>
-
-    <com.tbuonomo.viewpagerdotsindicator.DotsIndicator
-        android:id="@+id/dots_indicator"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="5dp"
-        app:dotsColor="@color/colorPrimaryDark"
-        app:dotsCornerRadius="8dp"
-        app:dotsSize="5dp"
-        app:dotsSpacing="4dp"
-        app:dotsWidthFactor="2.5"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/viewpager"
-        app:progressMode="true"
-        app:selectedDotColor="@color/colorPrimary" />
-
-    <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/ivBumper"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="45dp"
-        android:layout_marginTop="32dp"
-        android:background="@drawable/icon_rounded_corner"
-        android:padding="15dp"
-        android:src="@drawable/ic_bumper"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/dots_indicator" />
-
-    <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/ivOpenTrip"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="35dp"
-        android:layout_marginTop="32dp"
-        android:background="@drawable/icon_rounded_corner"
-        android:padding="15dp"
-        android:src="@drawable/ic_open_trip"
-        app:layout_constraintStart_toEndOf="@+id/ivBumper"
-        app:layout_constraintTop_toBottomOf="@+id/dots_indicator" />
-
-    <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/ivNimbrung"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="35dp"
-        android:layout_marginTop="32dp"
-        android:background="@drawable/icon_rounded_corner"
-        android:padding="16dp"
-        android:src="@drawable/ic_nimbrung"
-        app:layout_constraintStart_toEndOf="@+id/ivOpenTrip"
-        app:layout_constraintTop_toBottomOf="@+id/dots_indicator" />
-
-    <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/ivPromo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="35dp"
-        android:layout_marginTop="32dp"
-        android:background="@drawable/icon_rounded_corner"
-        android:padding="13dp"
-        android:src="@drawable/ic_promo"
-        app:layout_constraintStart_toEndOf="@+id/ivNimbrung"
-        app:layout_constraintTop_toBottomOf="@+id/dots_indicator" />
-
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/tvBumper"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="52dp"
-        android:layout_marginTop="14dp"
-        android:fontFamily="@font/poppins_medium"
-        android:text="BumPer"
-        android:textColor="@color/colorPrimary"
-        android:textSize="10dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ivBumper" />
-
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/tvOpentrip"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="137dp"
-        android:layout_marginTop="14dp"
-        android:fontFamily="@font/poppins_medium"
-        android:text="Open Trip"
-        android:textColor="@color/colorPrimary"
-        android:textSize="10dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ivOpenTrip" />
-
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/tvNimbrung"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="228dp"
-        android:layout_marginTop="14dp"
-        android:fontFamily="@font/poppins_medium"
-        android:text="Nimbrung"
-        android:textColor="@color/colorPrimary"
-        android:textSize="10dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ivNimbrung" />
-
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/tvPromo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="328dp"
-        android:layout_marginTop="14dp"
-        android:fontFamily="@font/poppins_medium"
-        android:text="Promo"
-        android:textColor="@color/colorPrimary"
-        android:textSize="10dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ivPromo" />
-
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/appCompatTextView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="30dp"
-        android:fontFamily="@font/poppins_semibold"
-        android:text="Populer di"
-        android:textColor="@color/colorBlack"
-        android:textSize="14dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvBumper" />
-
-    <androidx.appcompat.widget.AppCompatTextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="30dp"
-        android:fontFamily="@font/poppins_semibold"
-        android:text="Bandung"
-        android:textColor="@color/colorPrimary"
-        android:textSize="14dp"
-        app:layout_constraintStart_toEndOf="@+id/appCompatTextView6"
-        app:layout_constraintTop_toBottomOf="@+id/tvBumper" />
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/list_result"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="28dp"
-        android:orientation="horizontal"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        app:layout_constraintTop_toBottomOf="@+id/appCompatTextView6"
-        tools:listitem="@layout/adapter_list_populer" />
+        android:layout_height="match_parent">
 
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/appCompatTextView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="40dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Hi, Satrio"
+            android:textColor="@color/colorWhite"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/appCompatTextView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="2dp"
+            android:drawableStart="@drawable/ic_maps"
+            android:drawablePadding="8dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="Bandung, West Java"
+            android:textColor="@color/colorBlack"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/appCompatTextView3" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="52dp"
+            android:layout_marginEnd="24dp"
+            android:drawableStart="@drawable/ic_chat"
+            android:drawablePadding="6dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="@string/chat"
+            android:textColor="@color/colorPrimary"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="353dp"
+            android:layout_height="169dp"
+            android:layout_marginTop="25dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/appCompatTextView4">
+
+        </androidx.viewpager.widget.ViewPager>
+
+        <com.tbuonomo.viewpagerdotsindicator.DotsIndicator
+            android:id="@+id/dots_indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            app:dotsColor="@color/colorPrimaryDark"
+            app:dotsCornerRadius="8dp"
+            app:dotsSize="5dp"
+            app:dotsSpacing="4dp"
+            app:dotsWidthFactor="2.5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/viewpager"
+            app:progressMode="true"
+            app:selectedDotColor="@color/colorPrimary" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivBumper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="45dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/icon_rounded_corner"
+            android:padding="15dp"
+            android:src="@drawable/ic_bumper"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dots_indicator" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivOpenTrip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/icon_rounded_corner"
+            android:padding="15dp"
+            android:src="@drawable/ic_open_trip"
+            app:layout_constraintStart_toEndOf="@+id/ivBumper"
+            app:layout_constraintTop_toBottomOf="@+id/dots_indicator" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivNimbrung"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/icon_rounded_corner"
+            android:padding="16dp"
+            android:src="@drawable/ic_nimbrung"
+            app:layout_constraintStart_toEndOf="@+id/ivOpenTrip"
+            app:layout_constraintTop_toBottomOf="@+id/dots_indicator" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivPromo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/icon_rounded_corner"
+            android:padding="13dp"
+            android:src="@drawable/ic_promo"
+            app:layout_constraintStart_toEndOf="@+id/ivNimbrung"
+            app:layout_constraintTop_toBottomOf="@+id/dots_indicator" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvBumper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="52dp"
+            android:layout_marginTop="14dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="BumPer"
+            android:textColor="@color/colorPrimary"
+            android:textSize="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivBumper" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvOpentrip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="137dp"
+            android:layout_marginTop="14dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="Open Trip"
+            android:textColor="@color/colorPrimary"
+            android:textSize="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivOpenTrip" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvNimbrung"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="228dp"
+            android:layout_marginTop="14dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="Nimbrung"
+            android:textColor="@color/colorPrimary"
+            android:textSize="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivNimbrung" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvPromo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="328dp"
+            android:layout_marginTop="14dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="Promo"
+            android:textColor="@color/colorPrimary"
+            android:textSize="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivPromo" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/appCompatTextView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Populer di"
+            android:textColor="@color/colorBlack"
+            android:textSize="14dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvBumper" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Bandung"
+            android:textColor="@color/colorPrimary"
+            android:textSize="14dp"
+            app:layout_constraintStart_toEndOf="@+id/appCompatTextView6"
+            app:layout_constraintTop_toBottomOf="@+id/tvBumper" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/list_populer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="28dp"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintTop_toBottomOf="@+id/appCompatTextView6"
+            tools:listitem="@layout/adapter_list_populer" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvArtikel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Artikel Buat Kamu"
+            android:textColor="@color/colorBlack"
+            android:textSize="14dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/list_populer" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/list_artikel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="28dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintTop_toBottomOf="@+id/tvArtikel"
+            tools:listitem="@layout/adapter_list_artikel" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

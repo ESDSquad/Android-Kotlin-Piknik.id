@@ -7,12 +7,12 @@
 
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.esdsquad.piknik.data.view.fragment.LoginFragment"
+        android:name="com.esdsquad.piknik.data.view.fragment.auth.LoginFragment"
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" />
     <fragment
         android:id="@+id/registerFragment"
-        android:name="com.esdsquad.piknik.data.view.fragment.RegisterFragment"
+        android:name="com.esdsquad.piknik.data.view.fragment.auth.RegisterFragment"
         android:label="fragment_register"
         tools:layout="@layout/fragment_register" />
 </navigation>

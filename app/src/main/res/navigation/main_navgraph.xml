@@ -7,22 +7,22 @@
 
     <fragment
         android:id="@+id/berandaFragment"
-        android:name="com.esdsquad.piknik.data.view.fragment.BerandaFragment"
+        android:name="com.esdsquad.piknik.data.view.fragment.bottomnav.BerandaFragment"
         android:label="fragment_beranda"
         tools:layout="@layout/fragment_beranda" />
     <fragment
         android:id="@+id/pesananFragment"
-        android:name="com.esdsquad.piknik.data.view.fragment.PesananFragment"
+        android:name="com.esdsquad.piknik.data.view.fragment.bottomnav.PesananFragment"
         android:label="fragment_pesanan"
         tools:layout="@layout/fragment_pesanan" />
     <fragment
         android:id="@+id/notifikasiFragment"
-        android:name="com.esdsquad.piknik.data.view.fragment.NotifikasiFragment"
+        android:name="com.esdsquad.piknik.data.view.fragment.bottomnav.NotifikasiFragment"
         android:label="fragment_notifikasi"
         tools:layout="@layout/fragment_notifikasi" />
     <fragment
         android:id="@+id/akunSayaFragment"
-        android:name="com.esdsquad.piknik.data.view.fragment.AkunSayaFragment"
+        android:name="com.esdsquad.piknik.data.view.fragment.bottomnav.AkunSayaFragment"
         android:label="fragment_akun_saya"
         tools:layout="@layout/fragment_akun_saya" />
 </navigation>

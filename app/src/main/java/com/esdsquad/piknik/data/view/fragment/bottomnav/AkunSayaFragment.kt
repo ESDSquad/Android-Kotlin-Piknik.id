@@ -1,4 +1,4 @@
-package com.esdsquad.piknik.data.view.fragment
+package com.esdsquad.piknik.data.view.fragment.bottomnav
 
 import android.os.Bundle
 import android.view.LayoutInflater

@@ -1,21 +1,21 @@
-package com.esdsquad.piknik.data.view.fragment
+package com.esdsquad.piknik.data.view.fragment.bottomnav
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.esdsquad.piknik.databinding.FragmentNotifikasiBinding
+import com.esdsquad.piknik.databinding.FragmentPesananBinding
 
-class NotifikasiFragment : Fragment() {
+class PesananFragment : Fragment() {
 
-    private lateinit var binding: FragmentNotifikasiBinding
+    private lateinit var binding: FragmentPesananBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentNotifikasiBinding.inflate(inflater, container, false)
+        binding = FragmentPesananBinding.inflate(inflater, container, false)
         return binding.root
     }
 

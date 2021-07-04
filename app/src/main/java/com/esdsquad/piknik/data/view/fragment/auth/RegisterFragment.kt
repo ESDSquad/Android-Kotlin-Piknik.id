@@ -1,4 +1,4 @@
-package com.esdsquad.piknik.data.view.fragment
+package com.esdsquad.piknik.data.view.fragment.auth
 
 import android.os.Bundle
 import android.view.LayoutInflater

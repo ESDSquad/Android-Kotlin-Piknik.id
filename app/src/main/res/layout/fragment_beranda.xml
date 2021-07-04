@@ -17,7 +17,7 @@
             android:layout_marginStart="24dp"
             android:layout_marginTop="40dp"
             android:fontFamily="@font/poppins_semibold"
-            android:text="Hi, Satrio"
+            android:text="@string/nama_dummy"
             android:textColor="@color/colorWhite"
             android:textSize="14sp"
             app:layout_constraintStart_toStartOf="parent"
@@ -32,7 +32,7 @@
             android:drawableStart="@drawable/ic_maps"
             android:drawablePadding="8dp"
             android:fontFamily="@font/poppins_medium"
-            android:text="Bandung, West Java"
+            android:text="@string/lokasi_dummy"
             android:textColor="@color/colorBlack"
             android:textSize="14sp"
             app:layout_constraintStart_toStartOf="parent"
@@ -135,11 +135,12 @@
             android:layout_marginStart="52dp"
             android:layout_marginTop="14dp"
             android:fontFamily="@font/poppins_medium"
-            android:text="BumPer"
+            android:text="@string/bumper"
             android:textColor="@color/colorPrimary"
-            android:textSize="10dp"
+            android:textSize="10sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/ivBumper" />
+            app:layout_constraintTop_toBottomOf="@+id/ivBumper"
+            tools:ignore="SmallSp" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/tvOpentrip"
@@ -148,11 +149,12 @@
             android:layout_marginStart="137dp"
             android:layout_marginTop="14dp"
             android:fontFamily="@font/poppins_medium"
-            android:text="Open Trip"
+            android:text="@string/open_trip"
             android:textColor="@color/colorPrimary"
-            android:textSize="10dp"
+            android:textSize="10sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/ivOpenTrip" />
+            app:layout_constraintTop_toBottomOf="@+id/ivOpenTrip"
+            tools:ignore="SmallSp" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/tvNimbrung"
@@ -161,11 +163,12 @@
             android:layout_marginStart="228dp"
             android:layout_marginTop="14dp"
             android:fontFamily="@font/poppins_medium"
-            android:text="Nimbrung"
+            android:text="@string/nimbrung"
             android:textColor="@color/colorPrimary"
-            android:textSize="10dp"
+            android:textSize="10sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/ivNimbrung" />
+            app:layout_constraintTop_toBottomOf="@+id/ivNimbrung"
+            tools:ignore="SmallSp" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/tvPromo"
@@ -174,11 +177,12 @@
             android:layout_marginStart="328dp"
             android:layout_marginTop="14dp"
             android:fontFamily="@font/poppins_medium"
-            android:text="Promo"
+            android:text="@string/promo"
             android:textColor="@color/colorPrimary"
-            android:textSize="10dp"
+            android:textSize="10sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/ivPromo" />
+            app:layout_constraintTop_toBottomOf="@+id/ivPromo"
+            tools:ignore="SmallSp" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/appCompatTextView6"
@@ -187,9 +191,9 @@
             android:layout_marginStart="28dp"
             android:layout_marginTop="30dp"
             android:fontFamily="@font/poppins_semibold"
-            android:text="Populer di"
+            android:text="@string/populer_di"
             android:textColor="@color/colorBlack"
-            android:textSize="14dp"
+            android:textSize="14sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tvBumper" />
 
@@ -199,9 +203,9 @@
             android:layout_marginStart="4dp"
             android:layout_marginTop="30dp"
             android:fontFamily="@font/poppins_semibold"
-            android:text="Bandung"
+            android:text="@string/lokasi_dummy"
             android:textColor="@color/colorPrimary"
-            android:textSize="14dp"
+            android:textSize="14sp"
             app:layout_constraintStart_toEndOf="@+id/appCompatTextView6"
             app:layout_constraintTop_toBottomOf="@+id/tvBumper" />
 
@@ -222,9 +226,9 @@
             android:layout_marginStart="28dp"
             android:layout_marginTop="30dp"
             android:fontFamily="@font/poppins_semibold"
-            android:text="Artikel Buat Kamu"
+            android:text="@string/artikel_buat_kamu"
             android:textColor="@color/colorBlack"
-            android:textSize="14dp"
+            android:textSize="14sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/list_populer" />
 

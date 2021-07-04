@@ -18,7 +18,28 @@
     <string name="subtitle_3">Nikmati liburanmu dengan tetap menjaga protokol kesehatan yang diterapkan oleh pemerintah</string>
     <string name="persiapan_liburanmu">Persiapan liburanmu</string>
     <string name="chat">Chat</string>
+
     <string name="email">Email</string>
+    <string name="nama_lengkap">Nama Lengkap</string>
     <string name="password">Password</string>
+    <string name="password_confirmation">Konfirmasi Password</string>
+
+    <string name="registrasi_akun">Registrasi Akun</string>
+    <string name="buat_akun">Buat Akun</string>
+    <string name="udah_punya_akun">Udah punya akun ?</string>
+    <string name="masuk_aja">Masuk aja</string>
+    <string name="masuk_akun">Masuk Akun</string>
+    <string name="masuk">Masuk</string>
+    <string name="belum_punya_akun">Belum punya akun?</string>
+    <string name="buat_dulu">Buat dulu</string>
+
+    <string name="lokasi_dummy">Bandung, West Java</string>
+    <string name="nama_dummy">Hi, Satrio</string>
+    <string name="bumper">BumPer</string>
+    <string name="open_trip">Open Trip</string>
+    <string name="nimbrung">Nimbrung</string>
+    <string name="promo">Promo</string>
+    <string name="populer_di">Populer di</string>
+    <string name="artikel_buat_kamu">Artikel Buat Kamu</string>
 
 </resources>

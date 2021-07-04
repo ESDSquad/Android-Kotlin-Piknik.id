@@ -3,20 +3,32 @@ package com.esdsquad.piknik.data.view.activity
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.NavOptions
 import androidx.navigation.findNavController
 import androidx.navigation.ui.setupWithNavController
 import com.esdsquad.piknik.R
+import com.esdsquad.piknik.data.viewmodel.AuthenticationViewModel
+import com.esdsquad.piknik.data.viewmodel.factory.AuthenticationViewModelFactory
 import com.esdsquad.piknik.databinding.ActivityMainBinding
+import org.kodein.di.KodeinAware
+import org.kodein.di.android.kodein
+import org.kodein.di.generic.instance
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), KodeinAware {
 
     private val binding: ActivityMainBinding by lazy { ActivityMainBinding.inflate(layoutInflater) }
+    override val kodein by kodein()
+    private val authenticationViewModelFactory: AuthenticationViewModelFactory by instance()
+    private lateinit var viewModel: AuthenticationViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
         setupView()
+        setupViewModel()
+        setupListener()
+        setupObserver()
     }
 
     private fun setupView() {
@@ -56,5 +68,21 @@ class MainActivity : AppCompatActivity() {
                 else -> false
             }
         }
+    }
+
+    private fun setupViewModel() {
+        viewModel =
+            ViewModelProvider(
+                this,
+                authenticationViewModelFactory
+            ).get(AuthenticationViewModel::class.java)
+    }
+
+    private fun setupListener() {
+        //TODO("Not yet implemented")
+    }
+
+    private fun setupObserver() {
+        //TODO("Not yet implemented")
     }
 }

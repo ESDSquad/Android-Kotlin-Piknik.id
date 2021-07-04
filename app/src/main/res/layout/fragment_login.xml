@@ -24,7 +24,7 @@
         android:layout_marginStart="27dp"
         android:layout_marginTop="10dp"
         android:fontFamily="@font/poppins_semibold"
-        android:text="Masuk Akun"
+        android:text="@string/masuk_akun"
         android:textColor="@color/colorBlack"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -69,7 +69,7 @@
         android:layout_marginBottom="116dp"
         android:background="@drawable/buttonauth_rounded_corner"
         android:fontFamily="@font/poppins_semibold"
-        android:text="Masuk"
+        android:text="@string/masuk"
         android:textColor="@color/colorWhite"
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -82,7 +82,7 @@
         android:layout_marginStart="33dp"
         android:layout_marginTop="24dp"
         android:fontFamily="@font/poppins"
-        android:text="Belum punya akun?"
+        android:text="@string/belum_punya_akun"
         android:textColor="@color/colorBlack"
         android:textSize="12sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -95,11 +95,10 @@
         android:layout_marginStart="4dp"
         android:layout_marginTop="24dp"
         android:fontFamily="@font/poppins"
-        android:text="Buat dulu"
+        android:text="@string/buat_dulu"
         android:textColor="@color/colorPrimary"
         android:textSize="12sp"
         app:layout_constraintStart_toEndOf="@+id/tvBelum"
         app:layout_constraintTop_toBottomOf="@+id/appCompatButton" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
